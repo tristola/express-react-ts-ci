@@ -8,23 +8,14 @@
     "yarn": "1.x"
   },
   "scripts": {
-    "install": "yarn install:backend && yarn install:frontend",
     "install:backend": "cd backend && yarn install",
-    "install:frontend": "cd frontend && yarn install",
-    "postinstall": "yarn build",
-    "build": "yarn build:backend && yarn build:frontend",
+    "build": "yarn build:backend",
     "build:backend": "cd backend && yarn build",
-    "build:frontend": "cd frontend && yarn build",
-    "start": "concurrently \"yarn start:backend\" \"yarn start:frontend\"",
+    "start": "yarn start:backend",
     "start:db": "sudo mongod --dbpath /data/test/ --port 27017",
     "start:backend": "cd backend && yarn start",
-    "start:frontend": "cd frontend && yarn start",
-    "test": "yarn test:backend && yarn test:frontend",
+    "test": "yarn test:backend",
     "test:backend": "cd backend && yarn test",
-    "test:frontend": "cd frontend && yarn test",
     "serve": "cd backend && node dist/server.js"
-  },
-  "dependencies": {
-    "concurrently": "^3.5.1"
   }
 }
