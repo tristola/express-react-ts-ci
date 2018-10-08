@@ -21,7 +21,7 @@
     "test": "yarn test:backend && yarn test:frontend",
     "test:backend": "cd backend && yarn test",
     "test:frontend": "cd frontend && yarn test",
-    "coveralls": "yarn test --coverage && cat ./tests/coverage/lcov.info | coveralls",
+    "coveralls": "yarn test --coverage && cat ./backend/coverage/lcov.info | coveralls",
     "serve": "cd backend && node build/server.js"
   },
   "dependencies": {},
